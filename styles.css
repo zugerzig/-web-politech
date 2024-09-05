@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+}
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
+
+.main-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-menu li {
+    display: inline;
+    margin-right: 10px;
+}
+
+a {
+    color: rgba(194, 193, 133, 0.74);
+    text-decoration: none;
+}
