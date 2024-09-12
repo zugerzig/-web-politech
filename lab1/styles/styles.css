@@ -75,9 +75,9 @@ th, td {
     font-size: 1.2em;
 }
 
-.food-image img {
+img {
     display: block;
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
 }
 
