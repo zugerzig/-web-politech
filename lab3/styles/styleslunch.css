@@ -50,8 +50,20 @@ main {
     justify-content: space-between; 
 }
 
-.product:hover {
+.product:hover{
     border: 2px solid tomato;
+}
+
+.product:hover button{
+    background-color: tomato;
+}
+
+.product:hover .product-info .price, .product:hover .product-info .name {
+    font-size: 1.4em;
+}
+
+.product:hover .product-info .weight {
+    color: grey;
 }
 
 .product-img img {
@@ -74,7 +86,6 @@ main {
 
 .product-info .weight {
     font-size: 14px;
-    color: gray;
 }
 
 
@@ -87,10 +98,6 @@ main {
     width: 100%;
 }
 
-.controls button:hover {
-    background-color: tomato;
-}
-
 .nav {
     display: flex;
     flex-wrap: wrap;
@@ -101,12 +108,10 @@ main {
     color: tomato;
 }
 
-/* Стили для формы заказа */
 #order-form {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
     background-color: white;
 }
 
