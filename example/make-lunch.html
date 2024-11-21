@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Собрать ланч</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="link"><h1>Food Construct</h1></a>
+        <nav class="nav">
+            <a href="index.html" class="link"> О нас</a>
+            <a href="make-lunch.html" class="active"> Собрать ланч</a>
+            <a href="#" class="link"> Заказы</a>
+            <a href="#tellunch" class="link"> Контакты</a>
+        </nav> 
+    </header>
+
+    <main class="main">
+        <section id="soup-section">
+            <h2>Выберите суп</h2>
+            <div class="filters">
+                <button data-kind="fish">рыбный</button>
+                <button data-kind="meat">мясной</button>
+                <button data-kind="veg">вегетарианский</button>
+            </div>
+            <div class="dishes"></div>
+        </section>
+
+        <section id="main-section">
+            <h2>Выберите главное блюдо</h2>
+            <div class="filters">
+                <button data-kind="fish">рыбное</button>
+                <button data-kind="meat">мясное</button>
+                <button data-kind="veg">вегетарианское</button>
+            </div>
+            <div class="dishes"></div>
+        </section>
+
+        <section id="salat-section">
+            <h2>Выберите салат или стартер</h2>
+            <div class="filters">
+                <button data-kind="fish">рыбный</button>
+                <button data-kind="meat">мясной</button>
+                <button data-kind="veg">вегетарианский</button>
+            </div>
+            <div class="dishes"></div>
+        </section>
+
+        <section id="drink-section">
+            <h2>Выберите напиток</h2>
+            <div class="filters">
+                <button data-kind="cold">холодный</button>
+                <button data-kind="hot">горячий</button>
+            </div>
+            <div class="dishes"></div>
+        </section>
+
+        <section id="desert-section">  
+            <h2>Выберите десерт</h2>
+            <div class="filters">
+                <button data-kind="small">маленькая порция</button>
+                <button data-kind="medium">средняя порция</button>
+                <button data-kind="big">большая порция</button>
+            </div>
+            <div class="dishes"></div>
+        </section>
+
+        <section id="order-form">
+            <form action="https://httpbin.org/post" method="post">
+                <section class="order">
+                    <h2 style="text-align: center;">Сделать заказ</h2>
+                    <div class="dishesorder">
+                        <div class="dishorder">
+                            <h3>Ваш заказ</h3>
+                            <div id="no-selection-message" class="order-item">
+                                <p>Ничего не выбрано</p>
+                            </div>
+                            <div class="order-item" id="soup-order" style="display: none;">
+                                <p><strong>Суп</strong></p>
+                                <p id="selected-soup">Не выбран</p>
+                            </div>
+                            <div class="order-item" id="salat-order" style="display: none;">
+                                <p><strong>Салат</strong></p>
+                                <p id="selected-salat">Не выбран</p>
+                            </div>
+                            <div class="order-item" id="main-order" style="display: none;">
+                                <p><strong>Главное блюдо</strong></p>
+                                <p id="selected-main-dish">Не выбрано</p>
+                            </div>
+                            <div class="order-item" id="drink-order" style="display: none;">
+                                <p><strong>Напиток</strong></p>
+                                <p id="selected-drink">Не выбран</p>
+                            </div>
+                            <div class="order-item" id="desert-order" style="display: none;"> 
+                                <p><strong>Десерт</strong></p>
+                                <p id="selected-desert">Не выбран</p>
+                            </div>
+                            <div class="order-item" id="total-price-block" style="display: none;">
+                                <p id="total-price">Стоимость заказа<span class="price-value">0₽</span></p>
+                            </div>                    
+                            <label for="comments">Комментарии к заказу</label>
+                            <textarea id="comments" name="comments"></textarea>
+                        </div>
+
+                        <div class="dishcustomer">
+                            <h3>Ваши данные</h3>
+                            <label>Имя</label>
+                            <input type="text" required>
+                            <label >Email</label>
+                            <input type="email" required>
+                            <label><input type="checkbox" checked>Получать информацию о скидках и акциях</label>
+                            <label>Номер телефона</label>
+                            <input type="tel" required pattern="^\+?[0-9\s\-\(\)]{7,15}$">
+                            <label>Адрес доставки</label>
+                            <input type="text" required>
+                            <label class="note"><em>Доставка осуществляется только по Москве</em></label>
+                            <label>Время доставки:</label>
+                            <label><input type="radio" name="radio1" required>Как можно скорее</label>
+                            <label><input type="radio" name="radio1" required>К указанному времени</label>
+                            <label>Укажите время доставки</label>
+                            <input type="time" min="7:00" max="23:00" step="300">
+                            <label class="note"><em>Доступное время доставки с 7:00 до 23:00</em></label>
+                            <div class="buttonform">
+                                <button class="buttonform1" type="reset">Сбросить</button>
+                                <button class="buttonform2" type="submit">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </section>    
+    </main>
+
+    <footer class="footer" id="tellunch">
+        <p>Позвонить нам +7-000-000-00-00</p> 
+        <a href="#"></a>
+    </footer>
+
+    <script src="Dishes.js"></script>
+    <script src="displayDishes.js"></script>
+</body>
+</html>
