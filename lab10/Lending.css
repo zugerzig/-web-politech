@@ -1,0 +1,63 @@
+.top-header {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+}
+
+.hero {
+    background: url('eda.jpg') no-repeat center center/cover;
+    color: rgb(255, 254, 254);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 6.5rem; 
+}
+
+.hero p {
+    font-size: 2.5rem; 
+}
+
+.cta {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+
+img.logo {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 150px;
+}
+
+.features .col-md-4 {
+    transition: transform 0.3s;
+}
+
+.features .col-md-4:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.contact .col-md-6 {
+    margin: 0 auto; /* Центрирование формы */
+}
+
+footer .col-md-6 {
+    margin: 0 auto; /* Центрирование контактов */
+}
